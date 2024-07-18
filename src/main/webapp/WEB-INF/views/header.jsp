@@ -10,9 +10,43 @@
   <title>Document</title>
 
   <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
+
+
+<%--  <style>--%>
+<%--    .form-group {--%>
+<%--      margin-bottom: 15px;--%>
+<%--    }--%>
+<%--    .form-group label {--%>
+<%--      display: block;--%>
+<%--      font-weight: bold;--%>
+<%--      margin-bottom: 5px;--%>
+<%--    }--%>
+<%--    .form-group input,--%>
+<%--    .form-group select,--%>
+<%--    .form-group textarea {--%>
+<%--      width: 100%;--%>
+<%--      padding: 8px;--%>
+<%--      box-sizing: border-box;--%>
+<%--    }--%>
+<%--    .form-checkboxes, .form-select {--%>
+<%--      margin-bottom: 15px;--%>
+<%--    }--%>
+<%--    .form-checkboxes label, .form-select label {--%>
+<%--      display: inline-block;--%>
+<%--      margin-right: 10px;--%>
+<%--    }--%>
+<%--    .form-container {--%>
+<%--      max-width: 600px;--%>
+<%--      margin: 0 auto;--%>
+<%--      padding: 20px;--%>
+<%--      border: 1px solid #ccc;--%>
+<%--      border-radius: 5px;--%>
+<%--    }--%>
+<%--  </style>--%>
+
 </head>
 <body>
-<header class="header--main-page">
+<header class="header--form-page">
   <nav class="container container--70">
     <ul class="nav--actions">
       <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>
