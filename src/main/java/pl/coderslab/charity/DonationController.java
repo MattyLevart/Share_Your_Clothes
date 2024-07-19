@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.category.CategoryRepository;
 import pl.coderslab.charity.donation.Donation;
 import pl.coderslab.charity.donation.DonationRepository;
+import pl.coderslab.charity.institution.Institution;
 import pl.coderslab.charity.institution.InstitutionRepository;
 
 @Controller
@@ -37,6 +38,7 @@ public class DonationController {
         if (result.hasErrors()) {
             return "donationForm";
         }
+
         donationRepository.save(donation);
         return "redirect:/";
     }

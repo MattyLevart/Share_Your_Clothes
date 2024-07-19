@@ -150,8 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
     updateForm() {
       this.$step.innerText = this.currentStep;
 
-      // TODO: Validation
-
       this.slides.forEach(slide => {
         slide.classList.remove("active");
 
@@ -163,12 +161,47 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$stepInstructions[0].parentElement.parentElement.hidden = this.currentStep >= 5;
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
-      // TODO: get data from inputs and show them in summary
+      if (this.currentStep === 5) {
+        this.updateSummary();
+      }
     }
 
+    /**
+     * Update summary with input values
+     */
+    updateSummary() {
+      const quantity = document.querySelector('input[name="quantity"]').value;
+      const institutionName = document.querySelector('input[name="institution"]:checked').closest('label').querySelector('.title').innerText;
+      const institutionDescription = document.querySelector('input[name="institution"]:checked').closest('label').querySelector('.subtitle').innerText;
+      const street = document.querySelector('input[name="street"]').value;
+      const city = document.querySelector('input[name="city"]').value;
+      const zipCode = document.querySelector('input[name="zipCode"]').value;
+      const pickUpDate = document.querySelector('input[name="pickUpDate"]').value;
+      const pickUpTime = document.querySelector('input[name="pickUpTime"]').value;
+      const pickUpComment = document.querySelector('textarea[name="pickUpComment"]').value;
+
+      document.querySelector('.summary .icon-bag + .summary--text').innerText = `Oddajesz ${quantity} worków na cele charytatywne.`;
+      document.querySelector('.summary .icon-hand + .summary--text').innerText = `${institutionName} - ${institutionDescription}`;
+      document.querySelector('.summary .form-section--column:nth-child(1) ul').innerHTML = `
+        <li>${street}</li>
+        <li>${city}</li>
+        <li>${zipCode}</li>
+      `;
+      document.querySelector('.summary .form-section--column:nth-child(2) ul').innerHTML = `
+        <li>${pickUpDate}</li>
+        <li>${pickUpTime}</li>
+        <li>${pickUpComment}</li>
+      `;
+    }
+
+    submit(e) {
+      // Perform form validation here if needed
+      // e.preventDefault(); // Prevent form submission for testing
+    }
   }
   const form = document.querySelector(".form--steps");
   if (form !== null) {
     new FormSteps(form);
   }
 });
+
