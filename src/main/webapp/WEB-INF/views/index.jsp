@@ -16,8 +16,8 @@
 <header class="header--main-page">
     <nav class="container container--70">
         <ul class="nav--actions">
-            <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>
-            <li><a href="#" class="btn btn--small btn--highlighted">Załóż konto</a></li>
+            <li><a href="/login" class="btn btn--small btn--without-border">Zaloguj</a></li>
+            <li><a href="/register" class="btn btn--small btn--highlighted">Załóż konto</a></li>
         </ul>
 
         <ul>
@@ -144,7 +144,7 @@
         <span class="bottom-line--copy">Copyright &copy; 2018</span>
         <div class="bottom-line--icons">
             <a href="#" class="btn btn--small"><img src="/resources/images/icon-facebook.svg"/></a> <a href="#"
-                                                                                             class="btn btn--small"><img
+                                                                                                       class="btn btn--small"><img
                 src="/resources/images/icon-instagram.svg"/></a>
         </div>
     </div>

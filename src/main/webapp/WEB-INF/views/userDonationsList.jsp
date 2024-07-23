@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@include file="header.jsp"%>
-<p>Test includów header i footer</p>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@include file="header.jsp" %><html>
+<h3 class="upcoming-trips mb-4">Tu będzie lista donacji zalogowanego</h3>
+
 <%@include file="footer.jsp"%>
